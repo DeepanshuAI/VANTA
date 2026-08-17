@@ -12,7 +12,7 @@
       "_origin": "ast",
       "id": "src_components_heroscene_heroscene",
       "community": 1,
-      "community_name": "ScrollStage.jsx",
+      "community_name": "Three.js Scenes",
       "norm_label": "heroscene()"
     },
     {
@@ -24,7 +24,7 @@
       "_origin": "ast",
       "id": "src_components_heroscene_scenecontent",
       "community": 1,
-      "community_name": "ScrollStage.jsx",
+      "community_name": "Three.js Scenes",
       "norm_label": "scenecontent()"
     },
     {
@@ -36,7 +36,7 @@
       "_origin": "ast",
       "id": "src_components_scrollstage_scenecontent",
       "community": 1,
-      "community_name": "ScrollStage.jsx",
+      "community_name": "Three.js Scenes",
       "norm_label": "scenecontent()"
     },
     {
@@ -48,55 +48,55 @@
       "_origin": "ast",
       "id": "src_components_scrollstage_scrollstage",
       "community": 1,
-      "community_name": "ScrollStage.jsx",
+      "community_name": "Three.js Scenes",
       "norm_label": "scrollstage()"
     },
     {
       "label": "CameraController()",
       "file_type": "code",
       "source_file": "src/components/three/CameraController.jsx",
-      "source_location": "L91",
+      "source_location": "L96",
       "_callable": true,
       "_origin": "ast",
       "id": "src_components_three_cameracontroller_cameracontroller",
       "community": 1,
-      "community_name": "ScrollStage.jsx",
+      "community_name": "Three.js Scenes",
       "norm_label": "cameracontroller()"
     },
     {
       "label": "cartesianToSpherical()",
       "file_type": "code",
       "source_file": "src/components/three/CameraController.jsx",
-      "source_location": "L60",
+      "source_location": "L65",
       "_callable": true,
       "_origin": "ast",
       "id": "src_components_three_cameracontroller_cartesiantospherical",
       "community": 1,
-      "community_name": "ScrollStage.jsx",
+      "community_name": "Three.js Scenes",
       "norm_label": "cartesiantospherical()"
     },
     {
       "label": "interpolateKeyframes()",
       "file_type": "code",
       "source_file": "src/components/three/CameraController.jsx",
-      "source_location": "L49",
+      "source_location": "L35",
       "_callable": true,
       "_origin": "ast",
       "id": "src_components_three_cameracontroller_interpolatekeyframes",
       "community": 1,
-      "community_name": "ScrollStage.jsx",
+      "community_name": "Three.js Scenes",
       "norm_label": "interpolatekeyframes()"
     },
     {
       "label": "sphericalToCartesian()",
       "file_type": "code",
       "source_file": "src/components/three/CameraController.jsx",
-      "source_location": "L70",
+      "source_location": "L75",
       "_callable": true,
       "_origin": "ast",
       "id": "src_components_three_cameracontroller_sphericaltocartesian",
       "community": 1,
-      "community_name": "ScrollStage.jsx",
+      "community_name": "Three.js Scenes",
       "norm_label": "sphericaltocartesian()"
     },
     {
@@ -108,7 +108,7 @@
       "_origin": "ast",
       "id": "src_components_three_studioenvironment_groundplane",
       "community": 1,
-      "community_name": "ScrollStage.jsx",
+      "community_name": "Three.js Scenes",
       "norm_label": "groundplane()"
     },
     {
@@ -120,7 +120,7 @@
       "_origin": "ast",
       "id": "src_components_three_studioenvironment_particles",
       "community": 1,
-      "community_name": "ScrollStage.jsx",
+      "community_name": "Three.js Scenes",
       "norm_label": "particles()"
     },
     {
@@ -132,7 +132,7 @@
       "_origin": "ast",
       "id": "src_components_three_studioenvironment_studiolighting",
       "community": 1,
-      "community_name": "ScrollStage.jsx",
+      "community_name": "Three.js Scenes",
       "norm_label": "studiolighting()"
     },
     {
@@ -144,7 +144,7 @@
       "_origin": "ast",
       "id": "src_components_three_techoverlays_techlabel",
       "community": 1,
-      "community_name": "ScrollStage.jsx",
+      "community_name": "Three.js Scenes",
       "norm_label": "techlabel()"
     },
     {
@@ -156,8 +156,44 @@
       "_origin": "ast",
       "id": "src_components_three_techoverlays_techoverlays",
       "community": 1,
-      "community_name": "ScrollStage.jsx",
+      "community_name": "Three.js Scenes",
       "norm_label": "techoverlays()"
+    },
+    {
+      "label": "ScrollProgress()",
+      "file_type": "code",
+      "source_file": "src/components/ScrollProgress.jsx",
+      "source_location": "L20",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_scrollprogress_scrollprogress",
+      "community": 10,
+      "community_name": "Scroll Progress",
+      "norm_label": "scrollprogress()"
+    },
+    {
+      "label": "InteriorSection()",
+      "file_type": "code",
+      "source_file": "src/sections/InteriorSection.jsx",
+      "source_location": "L18",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_sections_interiorsection_interiorsection",
+      "community": 11,
+      "community_name": "Interior Section",
+      "norm_label": "interiorsection()"
+    },
+    {
+      "label": "PerformanceSection()",
+      "file_type": "code",
+      "source_file": "src/sections/PerformanceSection.jsx",
+      "source_location": "L17",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_sections_performancesection_performancesection",
+      "community": 12,
+      "community_name": "Performance Section",
+      "norm_label": "performancesection()"
     },
     {
       "label": "RevealSection()",
@@ -167,45 +203,9 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_components_revealsection_revealsection",
-      "community": 12,
-      "community_name": "RevealSection.jsx",
+      "community": 13,
+      "community_name": "Reveal Section",
       "norm_label": "revealsection()"
-    },
-    {
-      "label": "InspectOverlay()",
-      "file_type": "code",
-      "source_file": "src/components/InspectOverlay.jsx",
-      "source_location": "L14",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_inspectoverlay_inspectoverlay",
-      "community": 14,
-      "community_name": "Hotspots.jsx",
-      "norm_label": "inspectoverlay()"
-    },
-    {
-      "label": "HotspotMarker()",
-      "file_type": "code",
-      "source_file": "src/components/three/Hotspots.jsx",
-      "source_location": "L67",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_three_hotspots_hotspotmarker",
-      "community": 14,
-      "community_name": "Hotspots.jsx",
-      "norm_label": "hotspotmarker()"
-    },
-    {
-      "label": "Hotspots()",
-      "file_type": "code",
-      "source_file": "src/components/three/Hotspots.jsx",
-      "source_location": "L211",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_three_hotspots_hotspots",
-      "community": 14,
-      "community_name": "Hotspots.jsx",
-      "norm_label": "hotspots()"
     },
     {
       "label": "App()",
@@ -216,7 +216,7 @@
       "_origin": "ast",
       "id": "src_app_app",
       "community": 3,
-      "community_name": "App.jsx",
+      "community_name": "App Sections",
       "norm_label": "app()"
     },
     {
@@ -228,7 +228,7 @@
       "_origin": "ast",
       "id": "src_components_customcursor_customcursor",
       "community": 3,
-      "community_name": "App.jsx",
+      "community_name": "App Sections",
       "norm_label": "customcursor()"
     },
     {
@@ -240,44 +240,8 @@
       "_origin": "ast",
       "id": "src_components_infopanel_infopanel",
       "community": 3,
-      "community_name": "App.jsx",
+      "community_name": "App Sections",
       "norm_label": "infopanel()"
-    },
-    {
-      "label": "LoadingScreen()",
-      "file_type": "code",
-      "source_file": "src/components/LoadingScreen.jsx",
-      "source_location": "L12",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_loadingscreen_loadingscreen",
-      "community": 3,
-      "community_name": "App.jsx",
-      "norm_label": "loadingscreen()"
-    },
-    {
-      "label": "MagneticButton()",
-      "file_type": "code",
-      "source_file": "src/components/MagneticButton.jsx",
-      "source_location": "L5",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_magneticbutton_magneticbutton",
-      "community": 3,
-      "community_name": "App.jsx",
-      "norm_label": "magneticbutton()"
-    },
-    {
-      "label": "ScrollProgress()",
-      "file_type": "code",
-      "source_file": "src/components/ScrollProgress.jsx",
-      "source_location": "L20",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_scrollprogress_scrollprogress",
-      "community": 3,
-      "community_name": "App.jsx",
-      "norm_label": "scrollprogress()"
     },
     {
       "label": "AeroSection()",
@@ -288,56 +252,8 @@
       "_origin": "ast",
       "id": "src_sections_aerosection_aerosection",
       "community": 3,
-      "community_name": "App.jsx",
+      "community_name": "App Sections",
       "norm_label": "aerosection()"
-    },
-    {
-      "label": "ConfiguratorSection()",
-      "file_type": "code",
-      "source_file": "src/sections/ConfiguratorSection.jsx",
-      "source_location": "L8",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_sections_configuratorsection_configuratorsection",
-      "community": 3,
-      "community_name": "App.jsx",
-      "norm_label": "configuratorsection()"
-    },
-    {
-      "label": "CTASection()",
-      "file_type": "code",
-      "source_file": "src/sections/CTASection.jsx",
-      "source_location": "L8",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_sections_ctasection_ctasection",
-      "community": 3,
-      "community_name": "App.jsx",
-      "norm_label": "ctasection()"
-    },
-    {
-      "label": "HeroSection()",
-      "file_type": "code",
-      "source_file": "src/sections/HeroSection.jsx",
-      "source_location": "L12",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_sections_herosection_herosection",
-      "community": 3,
-      "community_name": "App.jsx",
-      "norm_label": "herosection()"
-    },
-    {
-      "label": "InteriorSection()",
-      "file_type": "code",
-      "source_file": "src/sections/InteriorSection.jsx",
-      "source_location": "L18",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_sections_interiorsection_interiorsection",
-      "community": 3,
-      "community_name": "App.jsx",
-      "norm_label": "interiorsection()"
     },
     {
       "label": "MachineSection()",
@@ -348,20 +264,8 @@
       "_origin": "ast",
       "id": "src_sections_machinesection_machinesection",
       "community": 3,
-      "community_name": "App.jsx",
+      "community_name": "App Sections",
       "norm_label": "machinesection()"
-    },
-    {
-      "label": "PerformanceSection()",
-      "file_type": "code",
-      "source_file": "src/sections/PerformanceSection.jsx",
-      "source_location": "L17",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_sections_performancesection_performancesection",
-      "community": 3,
-      "community_name": "App.jsx",
-      "norm_label": "performancesection()"
     },
     {
       "label": "TechnologySection()",
@@ -372,8 +276,104 @@
       "_origin": "ast",
       "id": "src_sections_technologysection_technologysection",
       "community": 3,
-      "community_name": "App.jsx",
+      "community_name": "App Sections",
       "norm_label": "technologysection()"
+    },
+    {
+      "label": "Navigation()",
+      "file_type": "code",
+      "source_file": "src/components/Navigation.jsx",
+      "source_location": "L7",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_navigation_navigation",
+      "community": 4,
+      "community_name": "Navigation and Audio",
+      "norm_label": "navigation()"
+    },
+    {
+      "label": "getAudioContext()",
+      "file_type": "code",
+      "source_file": "src/utils/audio.js",
+      "source_location": "L10",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_utils_audio_getaudiocontext",
+      "community": 4,
+      "community_name": "Navigation and Audio",
+      "norm_label": "getaudiocontext()"
+    },
+    {
+      "label": "isSoundEnabled()",
+      "file_type": "code",
+      "source_file": "src/utils/audio.js",
+      "source_location": "L23",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_utils_audio_issoundenabled",
+      "community": 4,
+      "community_name": "Navigation and Audio",
+      "norm_label": "issoundenabled()"
+    },
+    {
+      "label": "playClick()",
+      "file_type": "code",
+      "source_file": "src/utils/audio.js",
+      "source_location": "L37",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_utils_audio_playclick",
+      "community": 4,
+      "community_name": "Navigation and Audio",
+      "norm_label": "playclick()"
+    },
+    {
+      "label": "playHeadlightIgnition()",
+      "file_type": "code",
+      "source_file": "src/utils/audio.js",
+      "source_location": "L107",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_utils_audio_playheadlightignition",
+      "community": 4,
+      "community_name": "Navigation and Audio",
+      "norm_label": "playheadlightignition()"
+    },
+    {
+      "label": "playModeSwitch()",
+      "file_type": "code",
+      "source_file": "src/utils/audio.js",
+      "source_location": "L60",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_utils_audio_playmodeswitch",
+      "community": 4,
+      "community_name": "Navigation and Audio",
+      "norm_label": "playmodeswitch()"
+    },
+    {
+      "label": "playPaintSweep()",
+      "file_type": "code",
+      "source_file": "src/utils/audio.js",
+      "source_location": "L83",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_utils_audio_playpaintsweep",
+      "community": 4,
+      "community_name": "Navigation and Audio",
+      "norm_label": "playpaintsweep()"
+    },
+    {
+      "label": "toggleSound()",
+      "file_type": "code",
+      "source_file": "src/utils/audio.js",
+      "source_location": "L27",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_utils_audio_togglesound",
+      "community": 4,
+      "community_name": "Navigation and Audio",
+      "norm_label": "togglesound()"
     },
     {
       "label": "AeroLines()",
@@ -383,8 +383,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_components_three_aerolines_aerolines",
-      "community": 4,
-      "community_name": "CarPlaceholder.jsx",
+      "community": 5,
+      "community_name": "Three.js Car Simulation",
       "norm_label": "aerolines()"
     },
     {
@@ -395,8 +395,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_components_three_aerolines_createflowcurve",
-      "community": 4,
-      "community_name": "CarPlaceholder.jsx",
+      "community": 5,
+      "community_name": "Three.js Car Simulation",
       "norm_label": "createflowcurve()"
     },
     {
@@ -407,8 +407,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_components_three_aerolines_flowline",
-      "community": 4,
-      "community_name": "CarPlaceholder.jsx",
+      "community": 5,
+      "community_name": "Three.js Car Simulation",
       "norm_label": "flowline()"
     },
     {
@@ -419,8 +419,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_components_three_carplaceholder_carplaceholder",
-      "community": 4,
-      "community_name": "CarPlaceholder.jsx",
+      "community": 5,
+      "community_name": "Three.js Car Simulation",
       "norm_label": "carplaceholder()"
     },
     {
@@ -431,8 +431,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_components_three_carplaceholder_getexplodeamount",
-      "community": 4,
-      "community_name": "CarPlaceholder.jsx",
+      "community": 5,
+      "community_name": "Three.js Car Simulation",
       "norm_label": "getexplodeamount()"
     },
     {
@@ -443,8 +443,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_components_three_carplaceholder_gettargetvehiclerotation",
-      "community": 4,
-      "community_name": "CarPlaceholder.jsx",
+      "community": 5,
+      "community_name": "Three.js Car Simulation",
       "norm_label": "gettargetvehiclerotation()"
     },
     {
@@ -455,8 +455,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_components_three_carplaceholder_lerpmaterialcolor",
-      "community": 4,
-      "community_name": "CarPlaceholder.jsx",
+      "community": 5,
+      "community_name": "Three.js Car Simulation",
       "norm_label": "lerpmaterialcolor()"
     },
     {
@@ -468,7 +468,7 @@
       "_origin": "ast",
       "id": "src_components_configuratorui_configuratorui",
       "community": 6,
-      "community_name": "ConfiguratorUI.jsx",
+      "community_name": "Configurator UI and Data",
       "norm_label": "configuratorui()"
     },
     {
@@ -480,104 +480,104 @@
       "_origin": "ast",
       "id": "src_config_configdata_getconfigoption",
       "community": 6,
-      "community_name": "ConfiguratorUI.jsx",
+      "community_name": "Configurator UI and Data",
       "norm_label": "getconfigoption()"
     },
     {
-      "label": "Navigation()",
+      "label": "MagneticButton()",
       "file_type": "code",
-      "source_file": "src/components/Navigation.jsx",
-      "source_location": "L7",
+      "source_file": "src/components/MagneticButton.jsx",
+      "source_location": "L5",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_components_navigation_navigation",
-      "community": 8,
-      "community_name": "Navigation.jsx",
-      "norm_label": "navigation()"
+      "id": "src_components_magneticbutton_magneticbutton",
+      "community": 7,
+      "community_name": "Configurator Sections",
+      "norm_label": "magneticbutton()"
     },
     {
-      "label": "getAudioContext()",
+      "label": "ConfiguratorSection()",
       "file_type": "code",
-      "source_file": "src/utils/audio.js",
-      "source_location": "L10",
+      "source_file": "src/sections/ConfiguratorSection.jsx",
+      "source_location": "L8",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_utils_audio_getaudiocontext",
-      "community": 8,
-      "community_name": "Navigation.jsx",
-      "norm_label": "getaudiocontext()"
+      "id": "src_sections_configuratorsection_configuratorsection",
+      "community": 7,
+      "community_name": "Configurator Sections",
+      "norm_label": "configuratorsection()"
     },
     {
-      "label": "isSoundEnabled()",
+      "label": "CTASection()",
       "file_type": "code",
-      "source_file": "src/utils/audio.js",
-      "source_location": "L23",
+      "source_file": "src/sections/CTASection.jsx",
+      "source_location": "L8",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_utils_audio_issoundenabled",
-      "community": 8,
-      "community_name": "Navigation.jsx",
-      "norm_label": "issoundenabled()"
+      "id": "src_sections_ctasection_ctasection",
+      "community": 7,
+      "community_name": "Configurator Sections",
+      "norm_label": "ctasection()"
     },
     {
-      "label": "playClick()",
+      "label": "HeroSection()",
       "file_type": "code",
-      "source_file": "src/utils/audio.js",
-      "source_location": "L37",
+      "source_file": "src/sections/HeroSection.jsx",
+      "source_location": "L12",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_utils_audio_playclick",
-      "community": 8,
-      "community_name": "Navigation.jsx",
-      "norm_label": "playclick()"
+      "id": "src_sections_herosection_herosection",
+      "community": 7,
+      "community_name": "Configurator Sections",
+      "norm_label": "herosection()"
     },
     {
-      "label": "playHeadlightIgnition()",
+      "label": "InspectOverlay()",
       "file_type": "code",
-      "source_file": "src/utils/audio.js",
-      "source_location": "L107",
+      "source_file": "src/components/InspectOverlay.jsx",
+      "source_location": "L14",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_utils_audio_playheadlightignition",
+      "id": "src_components_inspectoverlay_inspectoverlay",
       "community": 8,
-      "community_name": "Navigation.jsx",
-      "norm_label": "playheadlightignition()"
+      "community_name": "Hotspots and Overlays",
+      "norm_label": "inspectoverlay()"
     },
     {
-      "label": "playModeSwitch()",
+      "label": "HotspotMarker()",
       "file_type": "code",
-      "source_file": "src/utils/audio.js",
-      "source_location": "L60",
+      "source_file": "src/components/three/Hotspots.jsx",
+      "source_location": "L67",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_utils_audio_playmodeswitch",
+      "id": "src_components_three_hotspots_hotspotmarker",
       "community": 8,
-      "community_name": "Navigation.jsx",
-      "norm_label": "playmodeswitch()"
+      "community_name": "Hotspots and Overlays",
+      "norm_label": "hotspotmarker()"
     },
     {
-      "label": "playPaintSweep()",
+      "label": "Hotspots()",
       "file_type": "code",
-      "source_file": "src/utils/audio.js",
-      "source_location": "L83",
+      "source_file": "src/components/three/Hotspots.jsx",
+      "source_location": "L211",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_utils_audio_playpaintsweep",
+      "id": "src_components_three_hotspots_hotspots",
       "community": 8,
-      "community_name": "Navigation.jsx",
-      "norm_label": "playpaintsweep()"
+      "community_name": "Hotspots and Overlays",
+      "norm_label": "hotspots()"
     },
     {
-      "label": "toggleSound()",
+      "label": "LoadingScreen()",
       "file_type": "code",
-      "source_file": "src/utils/audio.js",
-      "source_location": "L27",
+      "source_file": "src/components/LoadingScreen.jsx",
+      "source_location": "L12",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_utils_audio_togglesound",
-      "community": 8,
-      "community_name": "Navigation.jsx",
-      "norm_label": "togglesound()"
+      "id": "src_components_loadingscreen_loadingscreen",
+      "community": 9,
+      "community_name": "Loading Screen",
+      "norm_label": "loadingscreen()"
     },
     {
       "label": "dependencies",
@@ -587,7 +587,7 @@
       "_origin": "ast",
       "id": "package_dependencies",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "dependencies"
     },
     {
@@ -598,7 +598,7 @@
       "_origin": "ast",
       "id": "package_dependencies_framer_motion",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "framer-motion"
     },
     {
@@ -609,7 +609,7 @@
       "_origin": "ast",
       "id": "package_dependencies_gsap",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "gsap"
     },
     {
@@ -620,7 +620,7 @@
       "_origin": "ast",
       "id": "package_dependencies_lenis",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "lenis"
     },
     {
@@ -631,7 +631,7 @@
       "_origin": "ast",
       "id": "package_dependencies_react",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "react"
     },
     {
@@ -642,7 +642,7 @@
       "_origin": "ast",
       "id": "package_dependencies_react_dom",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "react-dom"
     },
     {
@@ -653,7 +653,7 @@
       "_origin": "ast",
       "id": "package_dependencies_react_three_drei",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "@react-three/drei"
     },
     {
@@ -664,7 +664,7 @@
       "_origin": "ast",
       "id": "package_dependencies_react_three_fiber",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "@react-three/fiber"
     },
     {
@@ -675,7 +675,7 @@
       "_origin": "ast",
       "id": "package_dependencies_studio_freight_lenis",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "@studio-freight/lenis"
     },
     {
@@ -686,7 +686,7 @@
       "_origin": "ast",
       "id": "package_dependencies_tailwindcss",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "tailwindcss"
     },
     {
@@ -697,7 +697,7 @@
       "_origin": "ast",
       "id": "package_dependencies_tailwindcss_vite",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "@tailwindcss/vite"
     },
     {
@@ -708,7 +708,7 @@
       "_origin": "ast",
       "id": "package_dependencies_three",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "three"
     },
     {
@@ -719,7 +719,7 @@
       "_origin": "ast",
       "id": "framer_motion",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "framer-motion"
     },
     {
@@ -730,7 +730,7 @@
       "_origin": "ast",
       "id": "gsap",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "gsap"
     },
     {
@@ -741,7 +741,7 @@
       "_origin": "ast",
       "id": "lenis",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "lenis"
     },
     {
@@ -752,7 +752,7 @@
       "_origin": "ast",
       "id": "react",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "react"
     },
     {
@@ -763,7 +763,7 @@
       "_origin": "ast",
       "id": "react_dom",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "react-dom"
     },
     {
@@ -774,7 +774,7 @@
       "_origin": "ast",
       "id": "react_three_drei",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "@react-three/drei"
     },
     {
@@ -785,7 +785,7 @@
       "_origin": "ast",
       "id": "react_three_fiber",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "@react-three/fiber"
     },
     {
@@ -796,7 +796,7 @@
       "_origin": "ast",
       "id": "studio_freight_lenis",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "@studio-freight/lenis"
     },
     {
@@ -807,7 +807,7 @@
       "_origin": "ast",
       "id": "tailwindcss",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "tailwindcss"
     },
     {
@@ -818,7 +818,7 @@
       "_origin": "ast",
       "id": "tailwindcss_vite",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "@tailwindcss/vite"
     },
     {
@@ -829,7 +829,7 @@
       "_origin": "ast",
       "id": "three",
       "community": 0,
-      "community_name": "Core NPM Dependencies",
+      "community_name": "Package Dependencies",
       "norm_label": "three"
     },
     {
@@ -840,7 +840,7 @@
       "_origin": "ast",
       "id": "src_components_heroscene",
       "community": 1,
-      "community_name": "ScrollStage.jsx",
+      "community_name": "Three.js Scenes",
       "norm_label": "heroscene.jsx"
     },
     {
@@ -851,7 +851,7 @@
       "_origin": "ast",
       "id": "src_components_scrollstage",
       "community": 1,
-      "community_name": "ScrollStage.jsx",
+      "community_name": "Three.js Scenes",
       "norm_label": "scrollstage.jsx"
     },
     {
@@ -862,7 +862,7 @@
       "_origin": "ast",
       "id": "src_components_three_cameracontroller",
       "community": 1,
-      "community_name": "ScrollStage.jsx",
+      "community_name": "Three.js Scenes",
       "norm_label": "cameracontroller.jsx"
     },
     {
@@ -873,30 +873,8 @@
       "_origin": "ast",
       "id": "src_components_three_cameracontroller_keyframes",
       "community": 1,
-      "community_name": "ScrollStage.jsx",
+      "community_name": "Three.js Scenes",
       "norm_label": "keyframes"
-    },
-    {
-      "label": "lookSpline",
-      "file_type": "code",
-      "source_file": "src/components/three/CameraController.jsx",
-      "source_location": "L42",
-      "_origin": "ast",
-      "id": "src_components_three_cameracontroller_lookspline",
-      "community": 1,
-      "community_name": "ScrollStage.jsx",
-      "norm_label": "lookspline"
-    },
-    {
-      "label": "posSpline",
-      "file_type": "code",
-      "source_file": "src/components/three/CameraController.jsx",
-      "source_location": "L35",
-      "_origin": "ast",
-      "id": "src_components_three_cameracontroller_posspline",
-      "community": 1,
-      "community_name": "ScrollStage.jsx",
-      "norm_label": "posspline"
     },
     {
       "label": "StudioEnvironment.jsx",
@@ -906,7 +884,7 @@
       "_origin": "ast",
       "id": "src_components_three_studioenvironment",
       "community": 1,
-      "community_name": "ScrollStage.jsx",
+      "community_name": "Three.js Scenes",
       "norm_label": "studioenvironment.jsx"
     },
     {
@@ -917,7 +895,7 @@
       "_origin": "ast",
       "id": "src_components_three_techoverlays",
       "community": 1,
-      "community_name": "ScrollStage.jsx",
+      "community_name": "Three.js Scenes",
       "norm_label": "techoverlays.jsx"
     },
     {
@@ -928,8 +906,74 @@
       "_origin": "ast",
       "id": "src_components_three_techoverlays_tech_items",
       "community": 1,
-      "community_name": "ScrollStage.jsx",
+      "community_name": "Three.js Scenes",
       "norm_label": "tech_items"
+    },
+    {
+      "label": "ScrollProgress.jsx",
+      "file_type": "code",
+      "source_file": "src/components/ScrollProgress.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_scrollprogress",
+      "community": 10,
+      "community_name": "Scroll Progress",
+      "norm_label": "scrollprogress.jsx"
+    },
+    {
+      "label": "SECTIONS",
+      "file_type": "code",
+      "source_file": "src/components/ScrollProgress.jsx",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "src_components_scrollprogress_sections",
+      "community": 10,
+      "community_name": "Scroll Progress",
+      "norm_label": "sections"
+    },
+    {
+      "label": "InteriorSection.jsx",
+      "file_type": "code",
+      "source_file": "src/sections/InteriorSection.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_sections_interiorsection",
+      "community": 11,
+      "community_name": "Interior Section",
+      "norm_label": "interiorsection.jsx"
+    },
+    {
+      "label": "MATERIALS",
+      "file_type": "code",
+      "source_file": "src/sections/InteriorSection.jsx",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "src_sections_interiorsection_materials",
+      "community": 11,
+      "community_name": "Interior Section",
+      "norm_label": "materials"
+    },
+    {
+      "label": "PerformanceSection.jsx",
+      "file_type": "code",
+      "source_file": "src/sections/PerformanceSection.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_sections_performancesection",
+      "community": 12,
+      "community_name": "Performance Section",
+      "norm_label": "performancesection.jsx"
+    },
+    {
+      "label": "STATS",
+      "file_type": "code",
+      "source_file": "src/sections/PerformanceSection.jsx",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "src_sections_performancesection_stats",
+      "community": 12,
+      "community_name": "Performance Section",
+      "norm_label": "stats"
     },
     {
       "label": "RevealSection.jsx",
@@ -938,8 +982,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_revealsection",
-      "community": 12,
-      "community_name": "RevealSection.jsx",
+      "community": 13,
+      "community_name": "Reveal Section",
       "norm_label": "revealsection.jsx"
     },
     {
@@ -949,86 +993,9 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "vite_config",
-      "community": 13,
-      "community_name": "vite.config.js",
+      "community": 14,
+      "community_name": "Vite Config",
       "norm_label": "vite.config.js"
-    },
-    {
-      "label": "InspectOverlay.jsx",
-      "file_type": "code",
-      "source_file": "src/components/InspectOverlay.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_inspectoverlay",
-      "community": 14,
-      "community_name": "Hotspots.jsx",
-      "norm_label": "inspectoverlay.jsx"
-    },
-    {
-      "label": "Hotspots.jsx",
-      "file_type": "code",
-      "source_file": "src/components/three/Hotspots.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_three_hotspots",
-      "community": 14,
-      "community_name": "Hotspots.jsx",
-      "norm_label": "hotspots.jsx"
-    },
-    {
-      "label": "HOTSPOT_DATA",
-      "file_type": "code",
-      "source_file": "src/components/three/Hotspots.jsx",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "src_components_three_hotspots_hotspot_data",
-      "community": 14,
-      "community_name": "Hotspots.jsx",
-      "norm_label": "hotspot_data"
-    },
-    {
-      "label": "rules/graphify.md",
-      "file_type": "document",
-      "source_file": ".agents/rules/graphify.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "agents_rules_graphify",
-      "community": 16,
-      "community_name": "rules/graphify.md",
-      "norm_label": "rules/graphify.md"
-    },
-    {
-      "label": "graphify",
-      "file_type": "document",
-      "source_file": ".agents/rules/graphify.md",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "agents_rules_graphify_graphify",
-      "community": 16,
-      "community_name": "rules/graphify.md",
-      "norm_label": "graphify"
-    },
-    {
-      "label": "workflows/graphify.md",
-      "file_type": "document",
-      "source_file": ".agents/workflows/graphify.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "agents_workflows_graphify",
-      "community": 17,
-      "community_name": "workflows/graphify.md",
-      "norm_label": "workflows/graphify.md"
-    },
-    {
-      "label": "Workflow: graphify",
-      "file_type": "document",
-      "source_file": ".agents/workflows/graphify.md",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "agents_workflows_graphify_workflow_graphify",
-      "community": 17,
-      "community_name": "workflows/graphify.md",
-      "norm_label": "workflow: graphify"
     },
     {
       "label": "package.json",
@@ -1038,7 +1005,7 @@
       "_origin": "ast",
       "id": "package",
       "community": 2,
-      "community_name": "Build Scripts & Dev Config",
+      "community_name": "Package Config",
       "norm_label": "package.json"
     },
     {
@@ -1049,7 +1016,7 @@
       "_origin": "ast",
       "id": "package_devdependencies",
       "community": 2,
-      "community_name": "Build Scripts & Dev Config",
+      "community_name": "Package Config",
       "norm_label": "devdependencies"
     },
     {
@@ -1060,7 +1027,7 @@
       "_origin": "ast",
       "id": "package_devdependencies_typescript",
       "community": 2,
-      "community_name": "Build Scripts & Dev Config",
+      "community_name": "Package Config",
       "norm_label": "typescript"
     },
     {
@@ -1071,7 +1038,7 @@
       "_origin": "ast",
       "id": "package_devdependencies_vite",
       "community": 2,
-      "community_name": "Build Scripts & Dev Config",
+      "community_name": "Package Config",
       "norm_label": "vite"
     },
     {
@@ -1082,7 +1049,7 @@
       "_origin": "ast",
       "id": "package_devdependencies_vitejs_plugin_react",
       "community": 2,
-      "community_name": "Build Scripts & Dev Config",
+      "community_name": "Package Config",
       "norm_label": "@vitejs/plugin-react"
     },
     {
@@ -1093,7 +1060,7 @@
       "_origin": "ast",
       "id": "package_name",
       "community": 2,
-      "community_name": "Build Scripts & Dev Config",
+      "community_name": "Package Config",
       "norm_label": "name"
     },
     {
@@ -1104,7 +1071,7 @@
       "_origin": "ast",
       "id": "package_private",
       "community": 2,
-      "community_name": "Build Scripts & Dev Config",
+      "community_name": "Package Config",
       "norm_label": "private"
     },
     {
@@ -1115,7 +1082,7 @@
       "_origin": "ast",
       "id": "package_scripts",
       "community": 2,
-      "community_name": "Build Scripts & Dev Config",
+      "community_name": "Package Config",
       "norm_label": "scripts"
     },
     {
@@ -1126,7 +1093,7 @@
       "_origin": "ast",
       "id": "package_scripts_build",
       "community": 2,
-      "community_name": "Build Scripts & Dev Config",
+      "community_name": "Package Config",
       "norm_label": "build"
     },
     {
@@ -1137,7 +1104,7 @@
       "_origin": "ast",
       "id": "package_scripts_dev",
       "community": 2,
-      "community_name": "Build Scripts & Dev Config",
+      "community_name": "Package Config",
       "norm_label": "dev"
     },
     {
@@ -1148,7 +1115,7 @@
       "_origin": "ast",
       "id": "package_scripts_preview",
       "community": 2,
-      "community_name": "Build Scripts & Dev Config",
+      "community_name": "Package Config",
       "norm_label": "preview"
     },
     {
@@ -1159,7 +1126,7 @@
       "_origin": "ast",
       "id": "package_type",
       "community": 2,
-      "community_name": "Build Scripts & Dev Config",
+      "community_name": "Package Config",
       "norm_label": "type"
     },
     {
@@ -1170,7 +1137,7 @@
       "_origin": "ast",
       "id": "package_version",
       "community": 2,
-      "community_name": "Build Scripts & Dev Config",
+      "community_name": "Package Config",
       "norm_label": "version"
     },
     {
@@ -1181,7 +1148,7 @@
       "_origin": "ast",
       "id": "typescript",
       "community": 2,
-      "community_name": "Build Scripts & Dev Config",
+      "community_name": "Package Config",
       "norm_label": "typescript"
     },
     {
@@ -1192,7 +1159,7 @@
       "_origin": "ast",
       "id": "vite",
       "community": 2,
-      "community_name": "Build Scripts & Dev Config",
+      "community_name": "Package Config",
       "norm_label": "vite"
     },
     {
@@ -1203,7 +1170,7 @@
       "_origin": "ast",
       "id": "vitejs_plugin_react",
       "community": 2,
-      "community_name": "Build Scripts & Dev Config",
+      "community_name": "Package Config",
       "norm_label": "@vitejs/plugin-react"
     },
     {
@@ -1214,7 +1181,7 @@
       "_origin": "ast",
       "id": "src_app",
       "community": 3,
-      "community_name": "App.jsx",
+      "community_name": "App Sections",
       "norm_label": "app.jsx"
     },
     {
@@ -1225,7 +1192,7 @@
       "_origin": "ast",
       "id": "src_components_customcursor",
       "community": 3,
-      "community_name": "App.jsx",
+      "community_name": "App Sections",
       "norm_label": "customcursor.jsx"
     },
     {
@@ -1236,63 +1203,8 @@
       "_origin": "ast",
       "id": "src_components_infopanel",
       "community": 3,
-      "community_name": "App.jsx",
+      "community_name": "App Sections",
       "norm_label": "infopanel.jsx"
-    },
-    {
-      "label": "LoadingScreen.jsx",
-      "file_type": "code",
-      "source_file": "src/components/LoadingScreen.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_loadingscreen",
-      "community": 3,
-      "community_name": "App.jsx",
-      "norm_label": "loadingscreen.jsx"
-    },
-    {
-      "label": "STATUSES",
-      "file_type": "code",
-      "source_file": "src/components/LoadingScreen.jsx",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "src_components_loadingscreen_statuses",
-      "community": 3,
-      "community_name": "App.jsx",
-      "norm_label": "statuses"
-    },
-    {
-      "label": "MagneticButton.jsx",
-      "file_type": "code",
-      "source_file": "src/components/MagneticButton.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_magneticbutton",
-      "community": 3,
-      "community_name": "App.jsx",
-      "norm_label": "magneticbutton.jsx"
-    },
-    {
-      "label": "ScrollProgress.jsx",
-      "file_type": "code",
-      "source_file": "src/components/ScrollProgress.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_scrollprogress",
-      "community": 3,
-      "community_name": "App.jsx",
-      "norm_label": "scrollprogress.jsx"
-    },
-    {
-      "label": "SECTIONS",
-      "file_type": "code",
-      "source_file": "src/components/ScrollProgress.jsx",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "src_components_scrollprogress_sections",
-      "community": 3,
-      "community_name": "App.jsx",
-      "norm_label": "sections"
     },
     {
       "label": "main.jsx",
@@ -1302,7 +1214,7 @@
       "_origin": "ast",
       "id": "src_main",
       "community": 3,
-      "community_name": "App.jsx",
+      "community_name": "App Sections",
       "norm_label": "main.jsx"
     },
     {
@@ -1313,63 +1225,8 @@
       "_origin": "ast",
       "id": "src_sections_aerosection",
       "community": 3,
-      "community_name": "App.jsx",
+      "community_name": "App Sections",
       "norm_label": "aerosection.jsx"
-    },
-    {
-      "label": "ConfiguratorSection.jsx",
-      "file_type": "code",
-      "source_file": "src/sections/ConfiguratorSection.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_sections_configuratorsection",
-      "community": 3,
-      "community_name": "App.jsx",
-      "norm_label": "configuratorsection.jsx"
-    },
-    {
-      "label": "CTASection.jsx",
-      "file_type": "code",
-      "source_file": "src/sections/CTASection.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_sections_ctasection",
-      "community": 3,
-      "community_name": "App.jsx",
-      "norm_label": "ctasection.jsx"
-    },
-    {
-      "label": "HeroSection.jsx",
-      "file_type": "code",
-      "source_file": "src/sections/HeroSection.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_sections_herosection",
-      "community": 3,
-      "community_name": "App.jsx",
-      "norm_label": "herosection.jsx"
-    },
-    {
-      "label": "InteriorSection.jsx",
-      "file_type": "code",
-      "source_file": "src/sections/InteriorSection.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_sections_interiorsection",
-      "community": 3,
-      "community_name": "App.jsx",
-      "norm_label": "interiorsection.jsx"
-    },
-    {
-      "label": "MATERIALS",
-      "file_type": "code",
-      "source_file": "src/sections/InteriorSection.jsx",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "src_sections_interiorsection_materials",
-      "community": 3,
-      "community_name": "App.jsx",
-      "norm_label": "materials"
     },
     {
       "label": "MachineSection.jsx",
@@ -1379,30 +1236,8 @@
       "_origin": "ast",
       "id": "src_sections_machinesection",
       "community": 3,
-      "community_name": "App.jsx",
+      "community_name": "App Sections",
       "norm_label": "machinesection.jsx"
-    },
-    {
-      "label": "PerformanceSection.jsx",
-      "file_type": "code",
-      "source_file": "src/sections/PerformanceSection.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_sections_performancesection",
-      "community": 3,
-      "community_name": "App.jsx",
-      "norm_label": "performancesection.jsx"
-    },
-    {
-      "label": "STATS",
-      "file_type": "code",
-      "source_file": "src/sections/PerformanceSection.jsx",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "src_sections_performancesection_stats",
-      "community": 3,
-      "community_name": "App.jsx",
-      "norm_label": "stats"
     },
     {
       "label": "TechnologySection.jsx",
@@ -1412,7 +1247,7 @@
       "_origin": "ast",
       "id": "src_sections_technologysection",
       "community": 3,
-      "community_name": "App.jsx",
+      "community_name": "App Sections",
       "norm_label": "technologysection.jsx"
     },
     {
@@ -1423,8 +1258,41 @@
       "_origin": "ast",
       "id": "src_sections_technologysection_features",
       "community": 3,
-      "community_name": "App.jsx",
+      "community_name": "App Sections",
       "norm_label": "features"
+    },
+    {
+      "label": "Navigation.jsx",
+      "file_type": "code",
+      "source_file": "src/components/Navigation.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_navigation",
+      "community": 4,
+      "community_name": "Navigation and Audio",
+      "norm_label": "navigation.jsx"
+    },
+    {
+      "label": "NAV_ITEMS",
+      "file_type": "code",
+      "source_file": "src/components/Navigation.jsx",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "src_components_navigation_nav_items",
+      "community": 4,
+      "community_name": "Navigation and Audio",
+      "norm_label": "nav_items"
+    },
+    {
+      "label": "audio.js",
+      "file_type": "code",
+      "source_file": "src/utils/audio.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_utils_audio",
+      "community": 4,
+      "community_name": "Navigation and Audio",
+      "norm_label": "audio.js"
     },
     {
       "label": "AeroLines.jsx",
@@ -1433,8 +1301,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_three_aerolines",
-      "community": 4,
-      "community_name": "CarPlaceholder.jsx",
+      "community": 5,
+      "community_name": "Three.js Car Simulation",
       "norm_label": "aerolines.jsx"
     },
     {
@@ -1444,8 +1312,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_components_three_aerolines_local_flow_paths",
-      "community": 4,
-      "community_name": "CarPlaceholder.jsx",
+      "community": 5,
+      "community_name": "Three.js Car Simulation",
       "norm_label": "local_flow_paths"
     },
     {
@@ -1455,8 +1323,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_three_carplaceholder",
-      "community": 4,
-      "community_name": "CarPlaceholder.jsx",
+      "community": 5,
+      "community_name": "Three.js Car Simulation",
       "norm_label": "carplaceholder.jsx"
     },
     {
@@ -1466,8 +1334,8 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "src_components_three_carplaceholder_tmpcolor",
-      "community": 4,
-      "community_name": "CarPlaceholder.jsx",
+      "community": 5,
+      "community_name": "Three.js Car Simulation",
       "norm_label": "_tmpcolor"
     },
     {
@@ -1478,7 +1346,7 @@
       "_origin": "ast",
       "id": "src_components_configuratorui",
       "community": 6,
-      "community_name": "ConfiguratorUI.jsx",
+      "community_name": "Configurator UI and Data",
       "norm_label": "configuratorui.jsx"
     },
     {
@@ -1489,7 +1357,7 @@
       "_origin": "ast",
       "id": "src_components_configuratorui_categories",
       "community": 6,
-      "community_name": "ConfiguratorUI.jsx",
+      "community_name": "Configurator UI and Data",
       "norm_label": "categories"
     },
     {
@@ -1500,7 +1368,7 @@
       "_origin": "ast",
       "id": "src_config_configdata",
       "community": 6,
-      "community_name": "ConfiguratorUI.jsx",
+      "community_name": "Configurator UI and Data",
       "norm_label": "configdata.js"
     },
     {
@@ -1511,7 +1379,7 @@
       "_origin": "ast",
       "id": "src_config_configdata_config_camera_hints",
       "community": 6,
-      "community_name": "ConfiguratorUI.jsx",
+      "community_name": "Configurator UI and Data",
       "norm_label": "config_camera_hints"
     },
     {
@@ -1522,7 +1390,7 @@
       "_origin": "ast",
       "id": "src_config_configdata_default_config",
       "community": 6,
-      "community_name": "ConfiguratorUI.jsx",
+      "community_name": "Configurator UI and Data",
       "norm_label": "default_config"
     },
     {
@@ -1533,7 +1401,7 @@
       "_origin": "ast",
       "id": "src_config_configdata_exterior_colors",
       "community": 6,
-      "community_name": "ConfiguratorUI.jsx",
+      "community_name": "Configurator UI and Data",
       "norm_label": "exterior_colors"
     },
     {
@@ -1544,7 +1412,7 @@
       "_origin": "ast",
       "id": "src_config_configdata_interior_trims",
       "community": 6,
-      "community_name": "ConfiguratorUI.jsx",
+      "community_name": "Configurator UI and Data",
       "norm_label": "interior_trims"
     },
     {
@@ -1555,41 +1423,107 @@
       "_origin": "ast",
       "id": "src_config_configdata_wheel_styles",
       "community": 6,
-      "community_name": "ConfiguratorUI.jsx",
+      "community_name": "Configurator UI and Data",
       "norm_label": "wheel_styles"
     },
     {
-      "label": "Navigation.jsx",
+      "label": "MagneticButton.jsx",
       "file_type": "code",
-      "source_file": "src/components/Navigation.jsx",
+      "source_file": "src/components/MagneticButton.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_navigation",
-      "community": 8,
-      "community_name": "Navigation.jsx",
-      "norm_label": "navigation.jsx"
+      "id": "src_components_magneticbutton",
+      "community": 7,
+      "community_name": "Configurator Sections",
+      "norm_label": "magneticbutton.jsx"
     },
     {
-      "label": "NAV_ITEMS",
+      "label": "ConfiguratorSection.jsx",
       "file_type": "code",
-      "source_file": "src/components/Navigation.jsx",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "src_components_navigation_nav_items",
-      "community": 8,
-      "community_name": "Navigation.jsx",
-      "norm_label": "nav_items"
-    },
-    {
-      "label": "audio.js",
-      "file_type": "code",
-      "source_file": "src/utils/audio.js",
+      "source_file": "src/sections/ConfiguratorSection.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_utils_audio",
+      "id": "src_sections_configuratorsection",
+      "community": 7,
+      "community_name": "Configurator Sections",
+      "norm_label": "configuratorsection.jsx"
+    },
+    {
+      "label": "CTASection.jsx",
+      "file_type": "code",
+      "source_file": "src/sections/CTASection.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_sections_ctasection",
+      "community": 7,
+      "community_name": "Configurator Sections",
+      "norm_label": "ctasection.jsx"
+    },
+    {
+      "label": "HeroSection.jsx",
+      "file_type": "code",
+      "source_file": "src/sections/HeroSection.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_sections_herosection",
+      "community": 7,
+      "community_name": "Configurator Sections",
+      "norm_label": "herosection.jsx"
+    },
+    {
+      "label": "InspectOverlay.jsx",
+      "file_type": "code",
+      "source_file": "src/components/InspectOverlay.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_inspectoverlay",
       "community": 8,
-      "community_name": "Navigation.jsx",
-      "norm_label": "audio.js"
+      "community_name": "Hotspots and Overlays",
+      "norm_label": "inspectoverlay.jsx"
+    },
+    {
+      "label": "Hotspots.jsx",
+      "file_type": "code",
+      "source_file": "src/components/three/Hotspots.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_three_hotspots",
+      "community": 8,
+      "community_name": "Hotspots and Overlays",
+      "norm_label": "hotspots.jsx"
+    },
+    {
+      "label": "HOTSPOT_DATA",
+      "file_type": "code",
+      "source_file": "src/components/three/Hotspots.jsx",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "src_components_three_hotspots_hotspot_data",
+      "community": 8,
+      "community_name": "Hotspots and Overlays",
+      "norm_label": "hotspot_data"
+    },
+    {
+      "label": "LoadingScreen.jsx",
+      "file_type": "code",
+      "source_file": "src/components/LoadingScreen.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_loadingscreen",
+      "community": 9,
+      "community_name": "Loading Screen",
+      "norm_label": "loadingscreen.jsx"
+    },
+    {
+      "label": "STATUSES",
+      "file_type": "code",
+      "source_file": "src/components/LoadingScreen.jsx",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "src_components_loadingscreen_statuses",
+      "community": 9,
+      "community_name": "Loading Screen",
+      "norm_label": "statuses"
     }
   ],
   "links": [
@@ -1670,7 +1604,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/components/three/CameraController.jsx",
-      "source_location": "L128",
+      "source_location": "L133",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_three_cameracontroller_cameracontroller",
@@ -1682,7 +1616,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/components/three/CameraController.jsx",
-      "source_location": "L136",
+      "source_location": "L141",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_three_cameracontroller_cameracontroller",
@@ -1694,7 +1628,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/components/three/CameraController.jsx",
-      "source_location": "L350",
+      "source_location": "L355",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_three_cameracontroller_cameracontroller",
@@ -2964,28 +2898,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".agents/rules/graphify.md",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agents_rules_graphify",
-      "target": "agents_rules_graphify_graphify",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".agents/workflows/graphify.md",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agents_workflows_graphify",
-      "target": "agents_workflows_graphify_workflow_graphify",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "package.json",
       "source_location": "L11",
       "weight": 1.0,
@@ -3508,28 +3420,6 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_three_cameracontroller",
-      "target": "src_components_three_cameracontroller_posspline",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/three/CameraController.jsx",
-      "source_location": "L42",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_three_cameracontroller",
-      "target": "src_components_three_cameracontroller_lookspline",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/three/CameraController.jsx",
-      "source_location": "L49",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_three_cameracontroller",
       "target": "src_components_three_cameracontroller_interpolatekeyframes",
       "confidence_score": 1.0
     },
@@ -3537,7 +3427,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/three/CameraController.jsx",
-      "source_location": "L60",
+      "source_location": "L65",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_three_cameracontroller",
@@ -3548,7 +3438,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/three/CameraController.jsx",
-      "source_location": "L70",
+      "source_location": "L75",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_three_cameracontroller",
@@ -3559,7 +3449,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/three/CameraController.jsx",
-      "source_location": "L91",
+      "source_location": "L96",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_three_cameracontroller",
@@ -3985,5 +3875,6 @@
       "confidence_score": 1.0
     }
   ],
-  "hyperedges": []
+  "hyperedges": [],
+  "built_at_commit": "be6636b81b9d0207810c3c2f76644cdb56c8f6d0"
 }

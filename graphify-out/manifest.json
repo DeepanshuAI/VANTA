@@ -2,17 +2,17 @@
   "package.json": {
     "mtime": 1786699698.959105,
     "ast_hash": "8a017a6f722cc131c745dd72acd6e021",
-    "semantic_hash": ""
+    "semantic_hash": "8a017a6f722cc131c745dd72acd6e021"
   },
   "src/App.jsx": {
     "mtime": 1786791292.0376046,
     "ast_hash": "9c2df78e805e383b308b1391556375b4",
-    "semantic_hash": ""
+    "semantic_hash": "9c2df78e805e383b308b1391556375b4"
   },
   "src/components/CustomCursor.jsx": {
     "mtime": 1786727224.3901467,
     "ast_hash": "1b52ea7671da3426bbfa45913e40ee18",
-    "semantic_hash": ""
+    "semantic_hash": "1b52ea7671da3426bbfa45913e40ee18"
   },
   "src/components/HeroScene.jsx": {
     "mtime": 1786623620.185649,
@@ -27,12 +27,12 @@
   "src/components/MagneticButton.jsx": {
     "mtime": 1786725622.540655,
     "ast_hash": "15fd153d4633b5ff357faf353e87926a",
-    "semantic_hash": ""
+    "semantic_hash": "15fd153d4633b5ff357faf353e87926a"
   },
   "src/components/Navigation.jsx": {
     "mtime": 1786791281.8542807,
     "ast_hash": "167797b27bb81f81bf5fbcd122a3fbc2",
-    "semantic_hash": ""
+    "semantic_hash": "167797b27bb81f81bf5fbcd122a3fbc2"
   },
   "src/components/RevealSection.jsx": {
     "mtime": 1786615209.189342,
@@ -40,19 +40,19 @@
     "semantic_hash": "0ca5296263c7324ef8a7d2c05e2b9f9a"
   },
   "src/components/three/CameraController.jsx": {
-    "mtime": 1786793888.8419137,
-    "ast_hash": "5d4642f778784dd48dade4b1f04c632e",
-    "semantic_hash": ""
+    "mtime": 1786796556.6507778,
+    "ast_hash": "9be52f417abd9d10e29d23e80ec0de43",
+    "semantic_hash": "9be52f417abd9d10e29d23e80ec0de43"
   },
   "src/components/three/CarPlaceholder.jsx": {
     "mtime": 1786793852.262235,
     "ast_hash": "e71520235eaab5aa51393f88d4b6c16f",
-    "semantic_hash": ""
+    "semantic_hash": "e71520235eaab5aa51393f88d4b6c16f"
   },
   "src/components/three/StudioEnvironment.jsx": {
     "mtime": 1786793908.7467144,
     "ast_hash": "cb0e9672a637280a43a6f055c977a9ac",
-    "semantic_hash": ""
+    "semantic_hash": "cb0e9672a637280a43a6f055c977a9ac"
   },
   "src/main.jsx": {
     "mtime": 1786615140.0382428,
@@ -67,17 +67,17 @@
   "src/sections/CTASection.jsx": {
     "mtime": 1786791165.711598,
     "ast_hash": "ef159bfe97f6d03229ccb77ec4156bb7",
-    "semantic_hash": ""
+    "semantic_hash": "ef159bfe97f6d03229ccb77ec4156bb7"
   },
   "src/sections/ConfiguratorSection.jsx": {
     "mtime": 1786696571.837529,
     "ast_hash": "93a510bd37379d11b75725766cb98632",
-    "semantic_hash": ""
+    "semantic_hash": "93a510bd37379d11b75725766cb98632"
   },
   "src/sections/HeroSection.jsx": {
     "mtime": 1786725690.8800106,
     "ast_hash": "3c313da088cbc08cb13cb79f1be01a9f",
-    "semantic_hash": ""
+    "semantic_hash": "3c313da088cbc08cb13cb79f1be01a9f"
   },
   "src/sections/InteriorSection.jsx": {
     "mtime": 1786626159.0306275,
@@ -102,7 +102,7 @@
   "vite.config.js": {
     "mtime": 1786792677.035527,
     "ast_hash": "8ff8ea228b54340ddf6fd52217581717",
-    "semantic_hash": ""
+    "semantic_hash": "8ff8ea228b54340ddf6fd52217581717"
   },
   "src/components/ScrollProgress.jsx": {
     "mtime": 1786626032.1416335,
@@ -112,32 +112,32 @@
   "src/components/ScrollStage.jsx": {
     "mtime": 1786793871.9017625,
     "ast_hash": "e81fcccd57b45d5fc575ce8012fdea55",
-    "semantic_hash": ""
+    "semantic_hash": "e81fcccd57b45d5fc575ce8012fdea55"
   },
   "src/components/three/AeroLines.jsx": {
     "mtime": 1786793800.8005695,
     "ast_hash": "b5637b7aa2affd64ab6d38c240a3f34b",
-    "semantic_hash": ""
+    "semantic_hash": "b5637b7aa2affd64ab6d38c240a3f34b"
   },
   "src/components/three/TechOverlays.jsx": {
     "mtime": 1786793919.2396553,
     "ast_hash": "d205b5ebff1b6c48fde5a2578a6f59f3",
-    "semantic_hash": ""
+    "semantic_hash": "d205b5ebff1b6c48fde5a2578a6f59f3"
   },
   "src/components/InfoPanel.jsx": {
     "mtime": 1786725733.7295437,
     "ast_hash": "8b2389b19c5e042cc78be3cea0c9d726",
-    "semantic_hash": ""
+    "semantic_hash": "8b2389b19c5e042cc78be3cea0c9d726"
   },
   "src/components/InspectOverlay.jsx": {
     "mtime": 1786791089.6247592,
     "ast_hash": "d17ad00513acb4bb7b7711245ff1f48c",
-    "semantic_hash": ""
+    "semantic_hash": "d17ad00513acb4bb7b7711245ff1f48c"
   },
   "src/components/three/Hotspots.jsx": {
     "mtime": 1786792733.065128,
     "ast_hash": "e00928416e598a59b6ab18cd20c0fb97",
-    "semantic_hash": ""
+    "semantic_hash": "e00928416e598a59b6ab18cd20c0fb97"
   },
   ".agents/rules/graphify.md": {
     "mtime": 1786624704.7761667,
@@ -182,16 +182,21 @@
   "src/components/ConfiguratorUI.jsx": {
     "mtime": 1786790717.1940944,
     "ast_hash": "87076a9ccdad81405387aa0a17ab0758",
-    "semantic_hash": ""
+    "semantic_hash": "87076a9ccdad81405387aa0a17ab0758"
   },
   "src/config/configData.js": {
     "mtime": 1786790686.429883,
     "ast_hash": "9ba5053693d5b6abd9007995838e46df",
-    "semantic_hash": ""
+    "semantic_hash": "9ba5053693d5b6abd9007995838e46df"
   },
   "src/utils/audio.js": {
     "mtime": 1786791272.0697892,
     "ast_hash": "35500d6fa0f4eae9b2bb4dbd54ecdff9",
-    "semantic_hash": ""
+    "semantic_hash": "35500d6fa0f4eae9b2bb4dbd54ecdff9"
+  },
+  "public/blue.json": {
+    "mtime": 1786871143.220273,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
   }
 }

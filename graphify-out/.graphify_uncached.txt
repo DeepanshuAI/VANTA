@@ -1,0 +1,8 @@
+C:\Users\dell\OneDrive\Desktop\vanta\.agents\rules\graphify.md
+C:\Users\dell\OneDrive\Desktop\vanta\.agents\workflows\graphify.md
+C:\Users\dell\OneDrive\Desktop\vanta\index.html
+C:\Users\dell\OneDrive\Desktop\vanta\public\favicon.svg
+C:\Users\dell\OneDrive\Desktop\vanta\public\icons.svg
+C:\Users\dell\OneDrive\Desktop\vanta\src\assets\hero.png
+C:\Users\dell\OneDrive\Desktop\vanta\src\assets\typescript.svg
+C:\Users\dell\OneDrive\Desktop\vanta\src\assets\vite.svg

@@ -1,14 +1,1 @@
-{
-  "0": "Core NPM Dependencies",
-  "1": "ScrollStage.jsx",
-  "2": "Build Scripts & Dev Config",
-  "3": "App.jsx",
-  "4": "CarPlaceholder.jsx",
-  "6": "ConfiguratorUI.jsx",
-  "8": "Navigation.jsx",
-  "12": "RevealSection.jsx",
-  "13": "vite.config.js",
-  "14": "Hotspots.jsx",
-  "16": "rules/graphify.md",
-  "17": "workflows/graphify.md"
-}
+{"0": "Package Dependencies", "1": "Three.js Scenes", "2": "Package Config", "3": "App Sections", "4": "Navigation and Audio", "5": "Three.js Car Simulation", "6": "Configurator UI and Data", "7": "Configurator Sections", "8": "Hotspots and Overlays", "9": "Loading Screen", "10": "Scroll Progress", "11": "Interior Section", "12": "Performance Section", "13": "Reveal Section", "14": "Vite Config"}
