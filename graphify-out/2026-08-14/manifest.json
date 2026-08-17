@@ -1,0 +1,182 @@
+{
+  "package.json": {
+    "mtime": 1786623403.497682,
+    "ast_hash": "5199402ab8de5381963eb9d3d7900a28",
+    "semantic_hash": "5199402ab8de5381963eb9d3d7900a28"
+  },
+  "src/App.jsx": {
+    "mtime": 1786635631.183671,
+    "ast_hash": "3f93ca44145b1af2d0e180e201a8009e",
+    "semantic_hash": ""
+  },
+  "src/components/CustomCursor.jsx": {
+    "mtime": 1786615184.5335848,
+    "ast_hash": "79524ebb97aae939f3747f596c7e02e0",
+    "semantic_hash": "79524ebb97aae939f3747f596c7e02e0"
+  },
+  "src/components/HeroScene.jsx": {
+    "mtime": 1786623620.185649,
+    "ast_hash": "94ff4060ba812d24b4ae773931b453d9",
+    "semantic_hash": "94ff4060ba812d24b4ae773931b453d9"
+  },
+  "src/components/LoadingScreen.jsx": {
+    "mtime": 1786615155.2360265,
+    "ast_hash": "1792c5d02d016a5033e5d8b678c04b6a",
+    "semantic_hash": "1792c5d02d016a5033e5d8b678c04b6a"
+  },
+  "src/components/MagneticButton.jsx": {
+    "mtime": 1786615195.6295688,
+    "ast_hash": "43a8165c9b848c92ba38450017e108de",
+    "semantic_hash": "43a8165c9b848c92ba38450017e108de"
+  },
+  "src/components/Navigation.jsx": {
+    "mtime": 1786621454.2262118,
+    "ast_hash": "09a88a08fe015f9c1e50e790d32a1703",
+    "semantic_hash": "09a88a08fe015f9c1e50e790d32a1703"
+  },
+  "src/components/RevealSection.jsx": {
+    "mtime": 1786615209.189342,
+    "ast_hash": "0ca5296263c7324ef8a7d2c05e2b9f9a",
+    "semantic_hash": "0ca5296263c7324ef8a7d2c05e2b9f9a"
+  },
+  "src/components/three/CameraController.jsx": {
+    "mtime": 1786635453.5496156,
+    "ast_hash": "840dedeab49a035bbe284b3fef040317",
+    "semantic_hash": ""
+  },
+  "src/components/three/CarPlaceholder.jsx": {
+    "mtime": 1786635562.584797,
+    "ast_hash": "5bb5e68e0b674970aac73b05672cff80",
+    "semantic_hash": ""
+  },
+  "src/components/three/StudioEnvironment.jsx": {
+    "mtime": 1786623455.0563018,
+    "ast_hash": "c2a0262ee24a3ef6a842d07827c5c393",
+    "semantic_hash": "c2a0262ee24a3ef6a842d07827c5c393"
+  },
+  "src/main.jsx": {
+    "mtime": 1786615140.0382428,
+    "ast_hash": "6860e7b41c1b1d407213bac9fc51721e",
+    "semantic_hash": "6860e7b41c1b1d407213bac9fc51721e"
+  },
+  "src/sections/AeroSection.jsx": {
+    "mtime": 1786626110.3481376,
+    "ast_hash": "183da01d6e2503278a3bd047894034f1",
+    "semantic_hash": "183da01d6e2503278a3bd047894034f1"
+  },
+  "src/sections/CTASection.jsx": {
+    "mtime": 1786626223.6551082,
+    "ast_hash": "43af6c52b46af277b917f3b426ed4f45",
+    "semantic_hash": "43af6c52b46af277b917f3b426ed4f45"
+  },
+  "src/sections/ConfiguratorSection.jsx": {
+    "mtime": 1786626205.1766806,
+    "ast_hash": "090f9e999b40b4625496164c6a449106",
+    "semantic_hash": "090f9e999b40b4625496164c6a449106"
+  },
+  "src/sections/HeroSection.jsx": {
+    "mtime": 1786635658.5096912,
+    "ast_hash": "cf96b05a786e486cf3280c4c85676e31",
+    "semantic_hash": ""
+  },
+  "src/sections/InteriorSection.jsx": {
+    "mtime": 1786626159.0306275,
+    "ast_hash": "4fad501e4a42e6f9295d6da4bf78376f",
+    "semantic_hash": "4fad501e4a42e6f9295d6da4bf78376f"
+  },
+  "src/sections/MachineSection.jsx": {
+    "mtime": 1786626083.5260346,
+    "ast_hash": "5090cc6a8d1da0c235e5f5d09b5056aa",
+    "semantic_hash": "5090cc6a8d1da0c235e5f5d09b5056aa"
+  },
+  "src/sections/PerformanceSection.jsx": {
+    "mtime": 1786626137.1316059,
+    "ast_hash": "c78c3b549af295b79e316a223e67a629",
+    "semantic_hash": "c78c3b549af295b79e316a223e67a629"
+  },
+  "src/sections/TechnologySection.jsx": {
+    "mtime": 1786626183.7686167,
+    "ast_hash": "2d62d9d9d693aa4f6d1bf39bf3aa5238",
+    "semantic_hash": "2d62d9d9d693aa4f6d1bf39bf3aa5238"
+  },
+  "vite.config.js": {
+    "mtime": 1786615070.6265817,
+    "ast_hash": "3b70a0b92236b6884dda15346af7cb25",
+    "semantic_hash": "3b70a0b92236b6884dda15346af7cb25"
+  },
+  "src/components/ScrollProgress.jsx": {
+    "mtime": 1786626032.1416335,
+    "ast_hash": "d332efe8f8ad1d491474b850d21b852b",
+    "semantic_hash": "d332efe8f8ad1d491474b850d21b852b"
+  },
+  "src/components/ScrollStage.jsx": {
+    "mtime": 1786635600.0774117,
+    "ast_hash": "964dccbf6cb2b77570c2babcd3c8eaa4",
+    "semantic_hash": ""
+  },
+  "src/components/three/AeroLines.jsx": {
+    "mtime": 1786625991.0769413,
+    "ast_hash": "996413e9c8e916da938e76122a0a6d4f",
+    "semantic_hash": "996413e9c8e916da938e76122a0a6d4f"
+  },
+  "src/components/three/TechOverlays.jsx": {
+    "mtime": 1786626013.3932226,
+    "ast_hash": "a60f6679eff921f059b95165ddc5606f",
+    "semantic_hash": "a60f6679eff921f059b95165ddc5606f"
+  },
+  "src/components/InfoPanel.jsx": {
+    "mtime": 1786635507.638113,
+    "ast_hash": "f813af5a66c2251033647c6eeb66315d",
+    "semantic_hash": ""
+  },
+  "src/components/InspectOverlay.jsx": {
+    "mtime": 1786635525.9029548,
+    "ast_hash": "bdbd149b7299f8568c14c12c787384b6",
+    "semantic_hash": ""
+  },
+  "src/components/three/Hotspots.jsx": {
+    "mtime": 1786635489.876458,
+    "ast_hash": "77b1c24078cc7864ab813d3de3d46ec4",
+    "semantic_hash": ""
+  },
+  ".agents/rules/graphify.md": {
+    "mtime": 1786624704.7761667,
+    "ast_hash": "a0e4d192b9e2e17256124dbfc8e24e6a",
+    "semantic_hash": ""
+  },
+  ".agents/workflows/graphify.md": {
+    "mtime": 1786624704.7761667,
+    "ast_hash": "a831cf3669f1e6ab85d8a80ebe655f99",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1786615080.9315898,
+    "ast_hash": "9569d9904fa0d02eb501f8bf0bb47428",
+    "semantic_hash": ""
+  },
+  "public/favicon.svg": {
+    "mtime": 1786274870.392308,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": ""
+  },
+  "public/icons.svg": {
+    "mtime": 1786274870.445045,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": ""
+  },
+  "src/assets/hero.png": {
+    "mtime": 1786274870.3010936,
+    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
+    "semantic_hash": ""
+  },
+  "src/assets/typescript.svg": {
+    "mtime": 1786274870.5042467,
+    "ast_hash": "07f132d2ec35a9f4c17c1b9f19a2aac7",
+    "semantic_hash": ""
+  },
+  "src/assets/vite.svg": {
+    "mtime": 1786274870.56449,
+    "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": ""
+  }
+}

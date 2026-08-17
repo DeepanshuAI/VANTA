@@ -1,0 +1,20 @@
+{
+  "0": "Core NPM Dependencies",
+  "1": "ScrollStage.jsx",
+  "2": "Build Scripts & Dev Config",
+  "3": "App.jsx",
+  "4": "Interactive Buttons & Action Sections",
+  "5": "Aerodynamics Visualizer",
+  "6": "CameraController.jsx",
+  "7": "Loading Screen Sequence",
+  "8": "Fixed Navigation System",
+  "9": "Scroll Progress Tracker",
+  "10": "Interior Sanctuary Section",
+  "11": "Performance Metrics Section",
+  "12": "RevealSection.jsx",
+  "13": "vite.config.js",
+  "14": "Hotspots.jsx",
+  "15": "TechnologySection.jsx",
+  "16": "rules/graphify.md",
+  "17": "workflows/graphify.md"
+}
