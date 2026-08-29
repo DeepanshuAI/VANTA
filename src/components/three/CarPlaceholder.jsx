@@ -2,8 +2,10 @@ import { useRef, useMemo, useEffect } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import * as THREE from 'three'
+import gsap from 'gsap'
 import { getConfigOption } from '../../config/configData'
 import AeroLines from './AeroLines'
+import { useScrollStore } from '../../utils/store'
 
 const MODEL_PATH = '/mercedes-benz_s63_coupe_brabus_800.glb'
 
@@ -58,20 +60,12 @@ function getTargetVehicleRotation(sp) {
   return THREE.MathUtils.lerp(0.14, 0.22, t)
 }
 
-const _tmpColor = new THREE.Color()
-function lerpMaterialColor(material, targetHex, speed = 0.08) {
-  if (!material || !material.color) return
-  _tmpColor.set(targetHex)
-  material.color.lerp(_tmpColor, speed)
-}
-
 /* ═══════════════════════════════════════════════════
    Main Realistic Vehicle Component
    ═══════════════════════════════════════════════════ */
 
 export default function CarPlaceholder({
   introProgress = 1,
-  scrollProgress = 0,
   inspectMode = false,
   configMode = false,
   vehicleConfig = null,
@@ -83,8 +77,8 @@ export default function CarPlaceholder({
   // Load realistic GLB model
   const { scene } = useGLTF(MODEL_PATH)
 
-  // Clone scene instance for isolated runtime manipulation
-  const clonedScene = useMemo(() => scene.clone(true), [scene])
+  // Use the cached scene directly instead of deep cloning to avoid main thread freeze
+  const clonedScene = scene
 
   // Refs for explodeable components and material groups
   const explodeNodes = useRef({})
@@ -99,18 +93,6 @@ export default function CarPlaceholder({
     headlights: [],
     taillights: [],
   })
-
-  // Target material values for smooth lerping
-  const targetBody = useRef({
-    color: '#0d0d0d',
-    metalness: 0.95,
-    roughness: 0.15,
-    clearcoat: 1.0,
-    clearcoatRoughness: 0.04,
-  })
-  const targetWheel = useRef({ color: '#d5d5d5', metalness: 0.98, roughness: 0.12 })
-  const targetInterior = useRef({ color: '#111111' })
-  const targetGlassTint = useRef('#111111')
 
   // Light sweep on paint color change
   const sweepLightRef = useRef()
@@ -157,16 +139,16 @@ export default function CarPlaceholder({
         child.castShadow = true
         child.receiveShadow = true
 
-        // Clone material so this instance has unique isolated shaders
+        // Process materials without unnecessary cloning
         if (child.material) {
           if (!matMap.has(child.material)) {
-            let clonedMat = child.material.clone()
-            const mName = clonedMat.name
+            let processedMat = child.material
+            const mName = processedMat.name
 
             // 1. Body Paint Materials
             if (mName === 'S63_Coloured' || mName === 'S63_Coloured.001' || mName === 'S63_Base') {
               // Upgrade to physical material for clearcoat brilliance
-              clonedMat = new THREE.MeshPhysicalMaterial({
+              processedMat = new THREE.MeshPhysicalMaterial({
                 color: new THREE.Color('#0d0d0d'),
                 metalness: 0.95,
                 roughness: 0.15,
@@ -176,11 +158,11 @@ export default function CarPlaceholder({
                 reflectivity: 1.0,
                 name: mName,
               })
-              mats.paint.push(clonedMat)
+              mats.paint.push(processedMat)
             }
             // 2. Wheel Rims
             else if (mName === 'Brabus_rim_specmap' || mName === 'brabus_rim_logo') {
-              clonedMat = new THREE.MeshPhysicalMaterial({
+              processedMat = new THREE.MeshPhysicalMaterial({
                 color: new THREE.Color('#d5d5d5'),
                 metalness: 0.98,
                 roughness: 0.12,
@@ -188,27 +170,27 @@ export default function CarPlaceholder({
                 envMapIntensity: 1.8,
                 name: mName,
               })
-              mats.rims.push(clonedMat)
+              mats.rims.push(processedMat)
             } else if (mName === 'brabus_black') {
-              clonedMat = new THREE.MeshStandardMaterial({
+              processedMat = new THREE.MeshStandardMaterial({
                 color: new THREE.Color('#161616'),
                 metalness: 0.9,
                 roughness: 0.25,
                 envMapIntensity: 1.2,
                 name: mName,
               })
-              mats.rimBlack.push(clonedMat)
+              mats.rimBlack.push(processedMat)
             }
             // 3. Interior Leathers
             else if (mName === 'S63_InteriorColourZone' || mName === 'S63_InteriorTillingColourZone') {
-              clonedMat = new THREE.MeshStandardMaterial({
+              processedMat = new THREE.MeshStandardMaterial({
                 color: new THREE.Color('#111111'),
                 metalness: 0.1,
                 roughness: 0.75,
                 envMapIntensity: 0.8,
                 name: mName,
               })
-              mats.interiorSeats.push(clonedMat)
+              mats.interiorSeats.push(processedMat)
             } else if (
               mName === 'S63_Interior_Zone1' ||
               mName === 'S63_Interior_Zone2' ||
@@ -217,18 +199,18 @@ export default function CarPlaceholder({
               mName === 'S63_InteriorA_Zone2' ||
               mName === 'S63_Interior'
             ) {
-              clonedMat = new THREE.MeshStandardMaterial({
+              processedMat = new THREE.MeshStandardMaterial({
                 color: new THREE.Color('#181818'),
                 metalness: 0.2,
                 roughness: 0.8,
                 envMapIntensity: 0.6,
                 name: mName,
               })
-              mats.interiorTrim.push(clonedMat)
+              mats.interiorTrim.push(processedMat)
             }
             // 4. Glass & Windows
             else if (mName === 's63amg21_glass_int' || mName === 's63amg21_glass') {
-              clonedMat = new THREE.MeshPhysicalMaterial({
+              processedMat = new THREE.MeshPhysicalMaterial({
                 color: new THREE.Color('#111111'),
                 metalness: 0.1,
                 roughness: 0.05,
@@ -239,20 +221,27 @@ export default function CarPlaceholder({
                 envMapIntensity: 2.0,
                 name: mName,
               })
-              mats.glass.push(clonedMat)
+              mats.glass.push(processedMat)
             }
             // 5. Carbon Fiber
             else if (mName === 'S63_Carbon1' || mName === 'S63_Carbon1.001') {
-              clonedMat = new THREE.MeshPhysicalMaterial({
+              processedMat = new THREE.MeshPhysicalMaterial({
                 color: new THREE.Color('#151515'),
                 metalness: 0.85,
-                roughness: 0.2,
-                clearcoat: 0.9,
-                clearcoatRoughness: 0.08,
-                envMapIntensity: 1.4,
+                roughness: 0.25,
+                clearcoat: 1.0,
+                clearcoatRoughness: 0.1,
+                envMapIntensity: 1.5,
                 name: mName,
               })
-              mats.carbon.push(clonedMat)
+              if (child.material.map) {
+                processedMat.map = child.material.map
+                processedMat.map.wrapS = THREE.RepeatWrapping
+                processedMat.map.wrapT = THREE.RepeatWrapping
+                processedMat.map.repeat.set(4, 4)
+              }
+              if (child.material.normalMap) processedMat.normalMap = child.material.normalMap
+              mats.carbon.push(processedMat)
             }
             // 6. Lights
             else if (
@@ -261,7 +250,7 @@ export default function CarPlaceholder({
               mName === 's63amg21_foglight' ||
               mName === 'S63_Light.001'
             ) {
-              clonedMat = new THREE.MeshStandardMaterial({
+              processedMat = new THREE.MeshStandardMaterial({
                 color: new THREE.Color('#ffffff'),
                 emissive: new THREE.Color('#ffffff'),
                 emissiveIntensity: 0.6,
@@ -269,14 +258,14 @@ export default function CarPlaceholder({
                 roughness: 0.2,
                 name: mName,
               })
-              mats.headlights.push(clonedMat)
+              mats.headlights.push(processedMat)
             } else if (
               mName === 's63amg21_taillight' ||
               mName === 's63amg21_runninglight' ||
               mName === 'S63_Light' ||
               mName === 's63amg21_chmsl'
             ) {
-              clonedMat = new THREE.MeshStandardMaterial({
+              processedMat = new THREE.MeshStandardMaterial({
                 color: new THREE.Color('#ca0015'),
                 emissive: new THREE.Color('#ff1a1a'),
                 emissiveIntensity: 0.8,
@@ -284,10 +273,22 @@ export default function CarPlaceholder({
                 roughness: 0.2,
                 name: mName,
               })
-              mats.taillights.push(clonedMat)
+              mats.taillights.push(processedMat)
+            }
+            // 7. General fixes
+            else if (mName === 's63amg21_tires') {
+              processedMat.roughness = 0.9
+              processedMat.metalness = 0.1
+              processedMat.color = new THREE.Color('#0a0a0a')
+            } else if (mName === 's63amg21_plastic') {
+              processedMat.roughness = 0.85
+              processedMat.metalness = 0.2
+            } else if (mName === 's63amg21_brake_disc') {
+              processedMat.roughness = 0.4
+              processedMat.metalness = 0.8
             }
 
-            matMap.set(child.material, clonedMat)
+            matMap.set(child.material, processedMat)
           }
           child.material = matMap.get(child.material)
         }
@@ -307,32 +308,60 @@ export default function CarPlaceholder({
     }
     prevExterior.current = vehicleConfig.exterior
 
+    const mats = materialGroups.current
+    const duration = 0.6
+    const ease = 'power2.out'
+
     // 1. Exterior Paint
     const ext = getConfigOption('exterior', vehicleConfig.exterior)
-    if (ext) {
-      targetBody.current = {
-        color: ext.color,
-        metalness: ext.metalness,
-        roughness: ext.roughness,
-        clearcoat: ext.clearcoat,
-        clearcoatRoughness: ext.clearcoatRoughness,
-      }
+    if (ext && mats.paint.length > 0) {
+      const targetColor = new THREE.Color(ext.color)
+      mats.paint.forEach((m) => {
+        gsap.to(m.color, { r: targetColor.r, g: targetColor.g, b: targetColor.b, duration, ease })
+        gsap.to(m, {
+          metalness: ext.metalness,
+          roughness: ext.roughness,
+          clearcoat: ext.clearcoat,
+          clearcoatRoughness: ext.clearcoatRoughness,
+          duration,
+          ease
+        })
+      })
     }
 
     // 2. Wheels
+    let wProps = null
     if (vehicleConfig.wheels === 'aero') {
-      targetWheel.current = { color: '#161616', metalness: 0.95, roughness: 0.25 }
+      wProps = { color: '#161616', metalness: 0.95, roughness: 0.25 }
     } else if (vehicleConfig.wheels === 'sport') {
-      targetWheel.current = { color: '#d8d8d8', metalness: 0.98, roughness: 0.12 }
+      wProps = { color: '#d8d8d8', metalness: 0.98, roughness: 0.12 }
     } else if (vehicleConfig.wheels === 'carbon') {
-      targetWheel.current = { color: '#1e1e1e', metalness: 0.88, roughness: 0.2 }
+      wProps = { color: '#1e1e1e', metalness: 0.88, roughness: 0.2 }
+    }
+    
+    if (wProps && mats.rims.length > 0) {
+      const targetColor = new THREE.Color(wProps.color)
+      mats.rims.forEach((m) => {
+        gsap.to(m.color, { r: targetColor.r, g: targetColor.g, b: targetColor.b, duration, ease })
+        gsap.to(m, { metalness: wProps.metalness, roughness: wProps.roughness, duration, ease })
+      })
     }
 
     // 3. Interior
     const intr = getConfigOption('interior', vehicleConfig.interior)
     if (intr) {
-      targetInterior.current = { color: intr.seatColor }
-      targetGlassTint.current = intr.glassTint
+      if (mats.interiorSeats.length > 0) {
+        const targetColor = new THREE.Color(intr.seatColor)
+        mats.interiorSeats.forEach((m) => {
+          gsap.to(m.color, { r: targetColor.r, g: targetColor.g, b: targetColor.b, duration, ease })
+        })
+      }
+      if (mats.glass.length > 0) {
+        const targetGlass = new THREE.Color(intr.glassTint)
+        mats.glass.forEach((m) => {
+          gsap.to(m.color, { r: targetGlass.r, g: targetGlass.g, b: targetGlass.b, duration, ease })
+        })
+      }
     }
   }, [vehicleConfig])
 
@@ -340,6 +369,7 @@ export default function CarPlaceholder({
 
   useFrame((_, delta) => {
     if (!groupRef.current) return
+    const scrollProgress = useScrollStore.getState().progress
 
     // ── Paint change light-sweep animation ──
     if (sweepProgress.current < 1) {
@@ -354,38 +384,8 @@ export default function CarPlaceholder({
       sweepLightRef.current.intensity = 0
     }
 
-    // ── Smooth material color lerping ──
-    const mats = materialGroups.current
-    if (mats.paint.length > 0) {
-      mats.paint.forEach((m) => {
-        lerpMaterialColor(m, targetBody.current.color)
-        m.metalness += (targetBody.current.metalness - m.metalness) * 0.08
-        m.roughness += (targetBody.current.roughness - m.roughness) * 0.08
-        if (m.clearcoat !== undefined) {
-          m.clearcoat += (targetBody.current.clearcoat - m.clearcoat) * 0.08
-          m.clearcoatRoughness += (targetBody.current.clearcoatRoughness - m.clearcoatRoughness) * 0.08
-        }
-      })
-    }
-    if (mats.rims.length > 0) {
-      mats.rims.forEach((m) => {
-        lerpMaterialColor(m, targetWheel.current.color)
-        m.metalness += (targetWheel.current.metalness - m.metalness) * 0.08
-        m.roughness += (targetWheel.current.roughness - m.roughness) * 0.08
-      })
-    }
-    if (mats.interiorSeats.length > 0) {
-      mats.interiorSeats.forEach((m) => {
-        lerpMaterialColor(m, targetInterior.current.color)
-      })
-    }
-    if (mats.glass.length > 0) {
-      mats.glass.forEach((m) => {
-        lerpMaterialColor(m, targetGlassTint.current)
-      })
-    }
-
     // ── Finale Headlight Ignition ──
+    const mats = materialGroups.current
     smoothScroll.current += (scrollProgress - smoothScroll.current) * 0.06
     const sp = smoothScroll.current
     const isFinalScene = sp > 0.86 && !isInteractive
@@ -478,7 +478,7 @@ export default function CarPlaceholder({
       <primitive ref={carWrapperRef} object={clonedScene} />
 
       {/* ── Synchronized Vehicle-Local Aerodynamic Streamlines ── */}
-      <AeroLines scrollProgress={scrollProgress} />
+      <AeroLines />
 
       {/* ── Contact Shadow Grounding Disc ── */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.005, 0.06]}>

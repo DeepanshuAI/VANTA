@@ -2,6 +2,7 @@ import { useRef, useEffect, useCallback } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 import gsap from 'gsap'
+import { useScrollStore } from '../../utils/store'
 
 /* ═══════════════════════════════════════════════════
    Camera Keyframes (scroll-driven mode)
@@ -94,7 +95,6 @@ function sphericalToCartesian(r, theta, phi, center) {
  *   onFocusComplete  — callback when camera reaches focus target
  */
 export default function CameraController({
-  scrollProgress = 0,
   inspectMode = false,
   configMode = false,
   configCameraHint = null,
@@ -138,6 +138,7 @@ export default function CameraController({
     if (!inspectMode && prev && !configMode) {
       // Exiting inspect mode — animate back to scroll keyframe
       isTransitioning.current = true
+      const scrollProgress = useScrollStore.getState().progress
       const { pos, look } = interpolateKeyframes(scrollProgress)
       const animValues = { px: camera.position.x, py: camera.position.y, pz: camera.position.z }
       if (transitionTween.current) transitionTween.current.kill()
@@ -149,7 +150,7 @@ export default function CameraController({
         onComplete: () => { isTransitioning.current = false },
       })
     }
-  }, [inspectMode, camera, scrollProgress, configMode])
+  }, [inspectMode, camera, configMode])
 
   // Track configMode changes
   useEffect(() => {
@@ -168,6 +169,7 @@ export default function CameraController({
     if (!configMode && prev) {
       // Exiting config mode — animate back to scroll keyframe
       isTransitioning.current = true
+      const scrollProgress = useScrollStore.getState().progress
       const { pos, look } = interpolateKeyframes(scrollProgress)
       const animValues = { px: camera.position.x, py: camera.position.y, pz: camera.position.z }
       if (transitionTween.current) transitionTween.current.kill()
@@ -179,7 +181,7 @@ export default function CameraController({
         onComplete: () => { isTransitioning.current = false },
       })
     }
-  }, [configMode, camera, scrollProgress])
+  }, [configMode, camera])
 
   // Config camera hint changes (category switch)
   useEffect(() => {
@@ -368,6 +370,7 @@ export default function CameraController({
       camera.lookAt(orbitCenter.current)
     } else {
       // Scroll mode — heavy cinematic camera on rails
+      const scrollProgress = useScrollStore.getState().progress
       const { pos, look } = interpolateKeyframes(scrollProgress)
       
       const distance = pos.distanceTo(look)

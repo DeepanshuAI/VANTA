@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import { useScrollStore } from '../utils/store'
 
 /**
  * Minimal scroll progress indicator.
@@ -17,28 +18,32 @@ const SECTIONS = [
   { label: 'Reserve', at: 0.95 },
 ]
 
-export default function ScrollProgress({ progress = 0 }) {
+export default function ScrollProgress() {
   const dotRef = useRef(null)
   const barRef = useRef(null)
 
   useEffect(() => {
-    if (dotRef.current) {
-      gsap.to(dotRef.current, {
-        top: `${progress * 100}%`,
-        duration: 0.3,
-        ease: 'power2.out',
-        overwrite: true,
-      })
-    }
-    if (barRef.current) {
-      gsap.to(barRef.current, {
-        scaleY: progress,
-        duration: 0.3,
-        ease: 'power2.out',
-        overwrite: true,
-      })
-    }
-  }, [progress])
+    const unsub = useScrollStore.subscribe((state) => {
+      const progress = state.progress
+      if (dotRef.current) {
+        gsap.to(dotRef.current, {
+          top: `${progress * 100}%`,
+          duration: 0.3,
+          ease: 'power2.out',
+          overwrite: true,
+        })
+      }
+      if (barRef.current) {
+        gsap.to(barRef.current, {
+          scaleY: progress,
+          duration: 0.3,
+          ease: 'power2.out',
+          overwrite: true,
+        })
+      }
+    })
+    return unsub
+  }, [])
 
   return (
     <div className="scroll-progress-container">

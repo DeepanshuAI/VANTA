@@ -11,6 +11,7 @@ import ScrollProgress from './components/ScrollProgress'
 import InfoPanel from './components/InfoPanel'
 import InspectOverlay from './components/InspectOverlay'
 import ConfiguratorUI from './components/ConfiguratorUI'
+import { useScrollStore } from './utils/store'
 
 import HeroSection from './sections/HeroSection'
 import MachineSection from './sections/MachineSection'
@@ -29,7 +30,6 @@ export default function App() {
   const [loading, setLoading] = useState(true)
   const [appReady, setAppReady] = useState(false)
   const [sceneReady, setSceneReady] = useState(false)
-  const [scrollProgress, setScrollProgress] = useState(0)
   const [inspectMode, setInspectMode] = useState(false)
   const [activeHotspot, setActiveHotspot] = useState(null)
   const [configMode, setConfigMode] = useState(false)
@@ -146,7 +146,7 @@ export default function App() {
     lenis.on('scroll', ScrollTrigger.update)
 
     lenis.on('scroll', ({ progress }) => {
-      setScrollProgress(progress)
+      useScrollStore.getState().setProgress(progress)
     })
 
     const updateLenis = (time) => {
@@ -181,7 +181,6 @@ export default function App() {
       {!loading && (
         <ScrollStage
           visible={appReady}
-          scrollProgress={scrollProgress}
           onSceneReady={handleSceneReady}
           inspectMode={inspectMode}
           configMode={configMode}
@@ -194,7 +193,7 @@ export default function App() {
 
       {/* Scroll progress indicator — hidden in overlay modes */}
       {!loading && !isOverlayActive && (
-        <ScrollProgress progress={scrollProgress} />
+        <ScrollProgress />
       )}
 
       {/* Inspect mode overlay */}

@@ -1,6 +1,7 @@
 import { useRef, useMemo } from 'react'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
+import { useScrollStore } from '../../utils/store'
 
 /**
  * Aerodynamics Airflow Visualization — Vehicle-Local Coordinates.
@@ -144,7 +145,7 @@ function createFlowCurve(points) {
   )
 }
 
-function FlowLine({ curve, color, speed, radius, opacity }) {
+function FlowLine({ curve, color, speed, radius, getOpacity }) {
   const meshRef = useRef()
   const matRef = useRef()
   const flowOffset = useRef(Math.random() * 10)
@@ -156,6 +157,8 @@ function FlowLine({ curve, color, speed, radius, opacity }) {
   useFrame((_, delta) => {
     if (!matRef.current) return
     flowOffset.current += delta * speed
+    const opacity = getOpacity()
+    
     // Subtle pulse
     const pulse = 0.85 + Math.sin(flowOffset.current * 3) * 0.15
     matRef.current.opacity = opacity * pulse * 0.75
@@ -167,7 +170,7 @@ function FlowLine({ curve, color, speed, radius, opacity }) {
         ref={matRef}
         color={color}
         transparent
-        opacity={opacity * 0.75}
+        opacity={getOpacity() * 0.75}
         side={THREE.DoubleSide}
         depthWrite={false}
         toneMapped={false}
@@ -176,7 +179,7 @@ function FlowLine({ curve, color, speed, radius, opacity }) {
   )
 }
 
-export default function AeroLines({ scrollProgress = 0 }) {
+export default function AeroLines() {
   const curves = useMemo(
     () =>
       LOCAL_FLOW_PATHS.map((fp) => ({
@@ -186,18 +189,13 @@ export default function AeroLines({ scrollProgress = 0 }) {
     []
   )
 
-  // Visibility timing:
-  // Fades in smoothly as car stabilizes at 0.27 -> 0.30
-  // Holds solid 0.30 -> 0.38
-  // Fades out smoothly 0.38 -> 0.42
-  const opacity = useMemo(() => {
+  const getOpacity = () => {
+    const scrollProgress = useScrollStore.getState().progress
     if (scrollProgress < 0.26 || scrollProgress > 0.43) return 0
     if (scrollProgress < 0.30) return (scrollProgress - 0.26) / 0.04
     if (scrollProgress <= 0.38) return 1
     return 1 - (scrollProgress - 0.38) / 0.05
-  }, [scrollProgress])
-
-  if (opacity <= 0) return null
+  }
 
   return (
     <group name="vehicle-aero-lines">
@@ -208,7 +206,7 @@ export default function AeroLines({ scrollProgress = 0 }) {
           color={item.color}
           speed={item.speed}
           radius={item.radius}
-          opacity={opacity}
+          getOpacity={getOpacity}
         />
       ))}
     </group>

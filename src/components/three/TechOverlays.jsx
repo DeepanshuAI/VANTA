@@ -1,5 +1,7 @@
-import { useMemo } from 'react'
+import { useRef } from 'react'
 import { Html } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
+import { useScrollStore } from '../../utils/store'
 
 /**
  * Floating technical UI labels positioned in 3D space around the car.
@@ -34,21 +36,41 @@ const TECH_ITEMS = [
   },
 ]
 
-function TechLabel({ item, opacity }) {
+function TechLabel({ item, index }) {
+  const divRef = useRef(null)
+
+  useFrame(() => {
+    if (!divRef.current) return
+    const scrollProgress = useScrollStore.getState().progress
+    let opacity = 0
+    if (scrollProgress >= 0.72 && scrollProgress < 0.87) {
+      if (scrollProgress < 0.76) opacity = (scrollProgress - 0.72) / 0.04
+      else if (scrollProgress < 0.83) opacity = 1
+      else opacity = 1 - (scrollProgress - 0.83) / 0.04
+    }
+    
+    if (opacity > 0) {
+      divRef.current.style.display = 'flex'
+      divRef.current.style.opacity = opacity * (0.6 + index * 0.1)
+    } else {
+      divRef.current.style.display = 'none'
+    }
+  })
+
   return (
     <Html
       position={item.position}
       center
       style={{
-        opacity,
-        transition: 'opacity 0.3s ease',
         pointerEvents: 'none',
         userSelect: 'none',
       }}
     >
       <div
+        ref={divRef}
         style={{
-          display: 'flex',
+          display: 'none',
+          opacity: 0,
           flexDirection: 'column',
           alignItems: 'flex-start',
           gap: '4px',
@@ -103,25 +125,14 @@ function TechLabel({ item, opacity }) {
   )
 }
 
-export default function TechOverlays({ scrollProgress = 0 }) {
-  // Visibility: fade in 0.72→0.76, fade out 0.83→0.87
-  const opacity = useMemo(() => {
-    if (scrollProgress < 0.72) return 0
-    if (scrollProgress < 0.76) return (scrollProgress - 0.72) / 0.04
-    if (scrollProgress < 0.83) return 1
-    if (scrollProgress < 0.87) return 1 - (scrollProgress - 0.83) / 0.04
-    return 0
-  }, [scrollProgress])
-
-  if (opacity <= 0) return null
-
+export default function TechOverlays() {
   return (
     <group>
       {TECH_ITEMS.map((item, i) => (
         <TechLabel
           key={i}
           item={item}
-          opacity={opacity * (0.6 + i * 0.1)} // staggered opacity
+          index={i}
         />
       ))}
     </group>

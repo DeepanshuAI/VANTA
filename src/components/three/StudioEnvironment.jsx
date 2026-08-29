@@ -55,7 +55,6 @@ export function StudioLighting({ intensity = 1 }) {
         penumbra={0.75}
         intensity={85 * intensity}
         color="#d5dff5"
-        castShadow
       />
 
       {/* Left flank rim light — sharp vehicle contour line */}

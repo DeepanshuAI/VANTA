@@ -15,7 +15,6 @@ import Hotspots from './three/Hotspots'
 function SceneContent({
   lightIntensity,
   carIntro,
-  scrollProgress,
   particleCount,
   inspectMode,
   configMode,
@@ -30,7 +29,6 @@ function SceneContent({
   return (
     <>
       <CameraController
-        scrollProgress={scrollProgress}
         inspectMode={inspectMode}
         configMode={configMode}
         configCameraHint={configCameraHint}
@@ -45,12 +43,11 @@ function SceneContent({
 
       <CarPlaceholder
         introProgress={carIntro}
-        scrollProgress={scrollProgress}
         inspectMode={inspectMode}
         configMode={configMode}
         vehicleConfig={vehicleConfig}
       />
-      <TechOverlays scrollProgress={scrollProgress} />
+      <TechOverlays />
       <Hotspots
         inspectMode={inspectMode}
         onSelect={onSelectHotspot}
@@ -69,7 +66,6 @@ function SceneContent({
  */
 export default function ScrollStage({
   visible,
-  scrollProgress = 0,
   onSceneReady,
   inspectMode = false,
   configMode = false,
@@ -183,7 +179,6 @@ export default function ScrollStage({
           <SceneContent
             lightIntensity={lightIntensity}
             carIntro={carIntro}
-            scrollProgress={scrollProgress}
             particleCount={particleCount}
             inspectMode={inspectMode}
             configMode={configMode}
